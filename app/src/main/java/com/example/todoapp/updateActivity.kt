@@ -19,8 +19,8 @@ class updateActivity : AppCompatActivity() {
         mydatabase = Room.databaseBuilder(
             applicationContext,database::class.java,"To_Do").build()
 
-        var pos = intent.getIntExtra("id",1)
-        if (pos != 1) {
+        var pos = intent.getIntExtra("id",-1)
+        if (pos != -1) {
 
             var tittle = DataObject.getdata(pos).tittle
             var priority = DataObject.getdata(pos).priority
